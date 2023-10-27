@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="front">4+4</div>
+  <div class="back">8</div>
+</div>
+<div class="card">
+  <div class="front">2-1</div>
+  <div class="back">1</div>
+</div>
+<div class="card">
+  <div class="front">2+4-1</div>
+  <div class="back">5</div>
+</div>
+<div class="card">
+  <div class="front">What does a cat say?</div>
+  <div class="back">meow</div>
+</div>
+<div class="card">
+  <div class="front">how many inches is a foot?</div>
+  <div class="back">12 inches</div>
+</div>
+<div class="card">
+  <div class="front">what color is the sky</div>
+  <div class="back">blue</div>
+</div>
+<div class="card">
+  <div class="front">what is a noun</div>
+  <div class="back">person, place, thing</div>
+</div>
+<div class="card">
+  <div class="front">2+12</div>
+  <div class="back">14</div>
+</div>
+```css
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform .6s linear;
+}
+.front {
+  background-color: pink;
+  transform: rotateY(0deg);
+}
+.back {
+  background-color: purple;
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+```
